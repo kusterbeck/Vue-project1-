@@ -1,12 +1,15 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
+      <my-navbar/>
     <router-view/>
   </div>
 </template>
+<script>
+import MyNavbar from './components/MyNavbar.vue';
+export default {
+  components: {MyNavbar}
+}
+</script>
 
 <style>
 #app {
@@ -16,7 +19,9 @@
   text-align: center;
   color: #2c3e50;
 }
-
+body {
+  background-color: rgb(235, 228, 221);
+}
 nav {
   padding: 30px;
 }
